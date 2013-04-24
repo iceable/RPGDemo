@@ -1,5 +1,6 @@
 #include "../globaldef.h"
 #include "MenuScene.h"
+#include "PlayScene.h"
 
 MenuScene::MenuScene()
 {
@@ -31,9 +32,11 @@ void MenuScene::Update()
     if (hge->Input_GetKeyState(HGEK_ESCAPE))
     {
         SceneEngine_->Pop();
+        SceneEngine_->Push(new PlayScene);
     }
     if (hge->Input_GetKeyState(HGEK_ENTER))
     {
-
+        SceneEngine_->Pop();
+        SceneEngine_->Push(new PlayScene);
     }
 }

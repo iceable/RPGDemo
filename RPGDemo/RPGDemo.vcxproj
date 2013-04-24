@@ -91,6 +91,7 @@
     <ClCompile Include="scene\MenuScene.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="scene\PlayScene.cpp" />
     <ClCompile Include="WinMain.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -113,6 +114,7 @@
     <ClInclude Include="hge\include\hgestrings.h" />
     <ClInclude Include="hge\include\hgevector.h" />
     <ClInclude Include="scene\MenuScene.h" />
+    <ClInclude Include="scene\PlayScene.h" />
     <ClInclude Include="scene\Scene.h" />
     <ClInclude Include="unit\Singleton.h" />
   </ItemGroup>

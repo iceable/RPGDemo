@@ -42,6 +42,9 @@
     <ClCompile Include="engine\SceneEngine.cpp">
       <Filter>源文件\engine</Filter>
     </ClCompile>
+    <ClCompile Include="scene\PlayScene.cpp">
+      <Filter>源文件\scene</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="hge\include\hge.h">
@@ -100,6 +103,9 @@
     </ClInclude>
     <ClInclude Include="engine\SceneEngine.h">
       <Filter>源文件\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="scene\PlayScene.h">
+      <Filter>源文件\scene</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
