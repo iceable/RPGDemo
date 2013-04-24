@@ -30,5 +30,5 @@ bool GameControler::Render()
 
 bool GameControler::Initialize()
 {
-    return false;
+    return true;
 }

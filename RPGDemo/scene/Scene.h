@@ -5,8 +5,8 @@
 class Scene
 {
 public:
-    Scene();
-    ~Scene();
+    Scene() {}
+    ~Scene() {}
 
     virtual bool Update() = 0;
     virtual bool Output() = 0;
@@ -15,14 +15,5 @@ public:
 private:
 
 };
-
-Scene::Scene()
-{
-}
-
-Scene::~Scene()
-{
-}
-
 
 #endif

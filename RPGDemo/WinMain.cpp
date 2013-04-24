@@ -2,8 +2,8 @@
 #include "hge\include\hge.h"
 #include "control\GameControler.h"
 
-#pragma comment(lib, "hge.lib")
-#pragma comment(lib, "hgehelp.lib")
+#pragma comment(lib, "hge/lib/hge.lib")
+#pragma comment(lib, "hge/lib/hgehelp.lib")
 
 HGE* hge = NULL;
 GameControler* game;
@@ -12,12 +12,14 @@ SceneEngine* SceneEngine_ = NULL;
 
 bool Update()
 {
-    return game->Update();
+    game->Update();
+    return false;
 }
 
 bool Render()
 {
-    return game->Render();
+    game->Render();
+    return false;
 }
 
 
@@ -36,12 +38,15 @@ int WINAPI WinMain(          HINSTANCE hInstance,
     hge->System_SetState(HGE_SHOWSPLASH, false); //²»ÏÔÊ¾HGEµÄLOGO
     hge->System_SetState(HGE_WINDOWED, true); 
 
+    SceneEngine_ = SceneEngine::Instance();
+    SceneEngine_->Initialize();
+
     if (hge->System_Initiate())
     {
         game = GameControler::Instance();
         game->Start();
         hge->System_Start();
-        hge->System_Shutdown();
+        //hge->System_Shutdown();
     }
     else
     {
