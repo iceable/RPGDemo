@@ -1,6 +1,7 @@
+#include "../globaldef.h"
 #include "SceneEngine.h"
 
-template<> SceneEngine* Singleton<SceneEngine>::m_pInst = 0;
+template<> SceneEngine* Singleton<SceneEngine>::m_pInst = NULL;
 
 SceneEngine::~SceneEngine()
 {
@@ -42,7 +43,7 @@ void SceneEngine::Pop()
         m_PushStack.pop_back();
         m_nPopCount--;
     }
-    if (m_nPopCount > m_GameStack.size())
+    if (m_nPopCount > (int)m_GameStack.size())
     {
         ///> pop¹ý¶à
         ///assert(false);

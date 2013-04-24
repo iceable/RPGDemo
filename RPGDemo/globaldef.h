@@ -1,6 +1,8 @@
+#pragma once
+
 #include <Windows.h>
-#include <hge.h>
-#include <hgesprite.h>
+#include "hge\include\hge.h"
+#include "hge\include\hgesprite.h"
 #include <vector>
 
 #include "scene\SceneEngine.h"

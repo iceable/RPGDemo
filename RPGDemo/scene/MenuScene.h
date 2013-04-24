@@ -1,5 +1,7 @@
 #ifndef MENU_SCENE
 #define MENU_SCENE
+
+#include "..\hge\include\hgesprite.h"
 #include "Scene.h"
 
 class MenuScene

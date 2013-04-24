@@ -1,12 +1,10 @@
 #ifndef SCENE_ENGINE
 #define SCENE_ENGINE
-#include "../stdafx.h"
 #include "../control/GameControler.h"
 #include "Scene.h"
 
 
-class SceneEngine
-    :public Singleton<SceneEngine>
+class SceneEngine : public Singleton<SceneEngine>
 {
     friend class Singleton<SceneEngine>;
 public:

@@ -1,7 +1,8 @@
+#include "../globaldef.h"
 #include "GameControler.h"
 #include "../scene/MenuScene.h"
 
-template<> GameControler* Singleton<GameControler>::m_pInst = 0;
+GameControler* Singleton<GameControler>::m_pInst = 0;
 
 GameControler::GameControler()
 {
@@ -23,7 +24,8 @@ bool GameControler::Update()
 
 bool GameControler::Render()
 {
-    return SceneEngine_->Output();
+    SceneEngine_->Output();
+    return true;
 }
 
 bool GameControler::Initialize()

@@ -95,8 +95,8 @@
     <ClInclude Include="scene\MenuScene.h">
       <Filter>源文件\scene</Filter>
     </ClInclude>
-    <ClInclude Include="stdafx.h">
-      <Filter>源文件</Filter>
+    <ClInclude Include="globaldef.h">
+      <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

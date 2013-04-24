@@ -1,6 +1,5 @@
 #ifndef SCENE
 #define SCENE
-#include "../stdafx.h"
 
 
 class Scene

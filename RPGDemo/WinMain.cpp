@@ -1,5 +1,5 @@
-#include "stdafx.h"
-#include <hge.h>
+#include "globaldef.h"
+#include "hge\include\hge.h"
 #include "control\GameControler.h"
 
 #pragma comment(lib, "hge.lib")

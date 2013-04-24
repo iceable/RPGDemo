@@ -82,13 +82,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="control\GameControler.cpp" />
-    <ClCompile Include="scene\MenuScene.cpp" />
-    <ClCompile Include="scene\SceneEngine.cpp" />
-    <ClCompile Include="WinMain.cpp" />
+    <ClCompile Include="control\GameControler.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="scene\MenuScene.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="scene\SceneEngine.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="WinMain.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="control\GameControler.h" />
+    <ClInclude Include="globaldef.h" />
     <ClInclude Include="hge\include\hge.h" />
     <ClInclude Include="hge\include\hgeanim.h" />
     <ClInclude Include="hge\include\hgecolor.h" />
@@ -105,7 +114,6 @@
     <ClInclude Include="scene\MenuScene.h" />
     <ClInclude Include="scene\Scene.h" />
     <ClInclude Include="scene\SceneEngine.h" />
-    <ClInclude Include="stdafx.h" />
     <ClInclude Include="unit\Singleton.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
