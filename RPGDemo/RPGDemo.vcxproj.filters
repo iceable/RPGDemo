@@ -25,6 +25,9 @@
     <Filter Include="源文件\scene">
       <UniqueIdentifier>{254658da-5235-46ba-a583-2e9e34906967}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\scene\engine">
+      <UniqueIdentifier>{f314cd71-9825-48d8-94b2-e2ff24f1169a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WinMain.cpp">
@@ -34,7 +37,7 @@
       <Filter>源文件\control</Filter>
     </ClCompile>
     <ClCompile Include="scene\SceneEngine.cpp">
-      <Filter>源文件\scene</Filter>
+      <Filter>源文件\scene\engine</Filter>
     </ClCompile>
     <ClCompile Include="scene\MenuScene.cpp">
       <Filter>源文件\scene</Filter>
@@ -89,14 +92,14 @@
     <ClInclude Include="scene\Scene.h">
       <Filter>源文件\scene</Filter>
     </ClInclude>
+    <ClInclude Include="globaldef.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
     <ClInclude Include="scene\SceneEngine.h">
-      <Filter>源文件\scene</Filter>
+      <Filter>源文件\scene\engine</Filter>
     </ClInclude>
     <ClInclude Include="scene\MenuScene.h">
       <Filter>源文件\scene</Filter>
-    </ClInclude>
-    <ClInclude Include="globaldef.h">
-      <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -24,7 +24,9 @@ bool GameControler::Update()
 
 bool GameControler::Render()
 {
+    hge->Gfx_BeginScene();
     SceneEngine_->Output();
+    hge->Gfx_EndScene();
     return true;
 }
 
