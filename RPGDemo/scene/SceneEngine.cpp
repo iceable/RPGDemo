@@ -86,7 +86,7 @@ bool SceneEngine::Update()
         if (m_GameStack.empty())
         {
             ///> 没有场景了
-            return false;
+            return true;
         }
 
         if (!m_GameStack.empty())
@@ -98,15 +98,19 @@ bool SceneEngine::Update()
     }
     if (!m_GameStack.empty())
     {
+        hge->Gfx_BeginScene();
         m_GameStack.back()->Update();
+        hge->Gfx_EndScene();
     }
-    return true;
+    return false;
 }
 
 void SceneEngine::Output()
 {
     if (!m_GameStack.empty())
     {
+        hge->Gfx_BeginScene();
         m_GameStack.back()->Output();
+        hge->Gfx_EndScene();
     }
 }

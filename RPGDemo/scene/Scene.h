@@ -8,8 +8,8 @@ public:
     Scene() {}
     ~Scene() {}
 
-    virtual bool Update() = 0;
-    virtual bool Output() = 0;
+    virtual void Update() = 0;
+    virtual void Output() = 0;
     virtual void Reset()  = 0;
 
 private:

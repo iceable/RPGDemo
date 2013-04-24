@@ -12,14 +12,12 @@ SceneEngine* SceneEngine_ = NULL;
 
 bool Update()
 {
-    game->Update();
-    return false;
+    return game->Update();
 }
 
 bool Render()
 {
-    game->Render();
-    return false;
+    return game->Render();
 }
 
 
@@ -46,7 +44,7 @@ int WINAPI WinMain(          HINSTANCE hInstance,
         game = GameControler::Instance();
         game->Start();
         hge->System_Start();
-        //hge->System_Shutdown();
+        hge->System_Shutdown();
     }
     else
     {

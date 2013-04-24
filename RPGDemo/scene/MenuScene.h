@@ -10,12 +10,13 @@ class MenuScene
 public:
     MenuScene();
     ~MenuScene();
-    bool Update();
-    bool Output();
+    void Update();
+    void Output();
     void Reset();
 private:
     hgeSprite* m_bgImg;
     HTEXTURE m_bgImgTex;
+    HEFFECT m_bgMusic;
 };
 
 #endif
