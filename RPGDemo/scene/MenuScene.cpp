@@ -17,9 +17,7 @@ void MenuScene::Reset()
 
 bool MenuScene::Output()
 {
-    hge->Gfx_BeginScene();
     m_bgImg->Render(10,10);
-    hge->Gfx_EndScene();
     return true;
 }
 

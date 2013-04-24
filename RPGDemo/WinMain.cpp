@@ -18,7 +18,9 @@ bool Update()
 
 bool Render()
 {
+    hge->Gfx_BeginScene();
     game->Render();
+    hge->Gfx_EndScene();
     return false;
 }
 
