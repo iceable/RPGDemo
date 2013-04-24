@@ -25,8 +25,8 @@
     <Filter Include="源文件\scene">
       <UniqueIdentifier>{254658da-5235-46ba-a583-2e9e34906967}</UniqueIdentifier>
     </Filter>
-    <Filter Include="源文件\scene\engine">
-      <UniqueIdentifier>{f314cd71-9825-48d8-94b2-e2ff24f1169a}</UniqueIdentifier>
+    <Filter Include="源文件\engine">
+      <UniqueIdentifier>{db0e691f-00db-4206-8b86-a60355b31289}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -36,11 +36,11 @@
     <ClCompile Include="control\GameControler.cpp">
       <Filter>源文件\control</Filter>
     </ClCompile>
-    <ClCompile Include="scene\SceneEngine.cpp">
-      <Filter>源文件\scene\engine</Filter>
-    </ClCompile>
     <ClCompile Include="scene\MenuScene.cpp">
       <Filter>源文件\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\SceneEngine.cpp">
+      <Filter>源文件\engine</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -92,14 +92,14 @@
     <ClInclude Include="scene\Scene.h">
       <Filter>源文件\scene</Filter>
     </ClInclude>
+    <ClInclude Include="scene\MenuScene.h">
+      <Filter>源文件\scene</Filter>
+    </ClInclude>
     <ClInclude Include="globaldef.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="scene\SceneEngine.h">
-      <Filter>源文件\scene\engine</Filter>
-    </ClInclude>
-    <ClInclude Include="scene\MenuScene.h">
-      <Filter>源文件\scene</Filter>
+    <ClInclude Include="engine\SceneEngine.h">
+      <Filter>源文件\engine</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

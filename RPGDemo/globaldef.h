@@ -5,7 +5,7 @@
 #include "hge\include\hgesprite.h"
 #include <vector>
 
-#include "scene\SceneEngine.h"
+#include "engine\SceneEngine.h"
 
 extern HGE* hge;
 extern SceneEngine* SceneEngine_;
