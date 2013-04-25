@@ -3,6 +3,7 @@
 
 #include "..\hge\include\hgesprite.h"
 #include "../control/controlobject/Texture.h"
+#include "../gameobject/people/selfpeople.h"
 #include "Scene.h"
 
 class PlayScene
@@ -17,6 +18,7 @@ public:
     void Reset();
 private:
     Texture m_MapTexture;
+    SelfPeople* m_SelfPeople;
 };
 
 #endif

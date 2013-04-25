@@ -8,17 +8,20 @@
 class People : public SpriteBase
 {
 public:
-    People(const std::string& strPath);
+    People(int x = 0, int y = 0);
     virtual ~People();
 
-    virtual bool IsVaild();
+    virtual bool LoadPeopleImage(const std::string& strPath,
+        int nFrame, int nWidth, int nHeight);
+
+    virtual bool IsVaild() {return true;}
 
 protected:
     int m_HP;
     int m_HPMax;
     int m_MP;
     int m_MPMax;
-    Texture m_Direction[Direction_Tail];
+    Texture m_DirectionTex[Direction_Tail];
 };
 
 #endif

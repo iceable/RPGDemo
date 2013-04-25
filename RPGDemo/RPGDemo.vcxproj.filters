@@ -134,14 +134,14 @@
     <ClInclude Include="control\controlobject\Texture.h">
       <Filter>源文件\control\controlobject</Filter>
     </ClInclude>
-    <ClInclude Include="gameobject\object.h">
-      <Filter>源文件\control\gameobject</Filter>
-    </ClInclude>
     <ClInclude Include="gameobject\people\people.h">
       <Filter>源文件\control\gameobject\people</Filter>
     </ClInclude>
     <ClInclude Include="gameobject\people\selfpeople.h">
       <Filter>源文件\control\gameobject\people</Filter>
+    </ClInclude>
+    <ClInclude Include="gameobject\Sprite.h">
+      <Filter>源文件\control\gameobject</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

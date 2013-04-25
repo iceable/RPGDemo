@@ -1,12 +1,22 @@
 #ifndef SELFPEOPLE_
 #define SELFPEOPLE_
 
-class Selfpeople
+#include "people.h"
+
+class SelfPeople : public People
 {
 public:
-    Selfpeople();
-    virtual ~Selfpeople();
+    SelfPeople(int x = 0, int y = 0);
+    virtual ~SelfPeople();
 
+    virtual void Render();
+
+    virtual void Update();
+
+    virtual bool IsVaild();
+
+protected:
+    PeopleDirection m_Direction;
 };
 
 #endif

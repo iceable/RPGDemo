@@ -1,7 +1,7 @@
 #ifndef OBJECT_
 #define OBJECT_
 
-enum _PeopleDirection
+typedef enum _PeopleDirection
 {
     Direction_Left,
     Direction_Right,
@@ -13,8 +13,8 @@ enum _PeopleDirection
 class ISprite
 {
 public:
-    ISprite();
-    virtual ~ISprite();
+    ISprite() {}
+    virtual ~ISprite() {}
 
     virtual void Render() = 0;
 

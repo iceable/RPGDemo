@@ -4,6 +4,7 @@
 PlayScene::PlayScene()
 {
     m_MapTexture.Load("res\\img\\map.png", 0, 0, 800, 600);
+    m_SelfPeople = new SelfPeople(500, 600);
 }
 
 PlayScene::~PlayScene()
@@ -18,9 +19,10 @@ void PlayScene::Reset()
 void PlayScene::Output()
 {
     m_MapTexture.Render(0, 0);
+    m_SelfPeople->Render();
 }
 
 void PlayScene::Update()
 {
-
+    m_SelfPeople->Update();
 }

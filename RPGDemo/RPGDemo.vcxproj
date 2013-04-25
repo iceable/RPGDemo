@@ -103,7 +103,7 @@
     <ClInclude Include="control\controlobject\Texture.h" />
     <ClInclude Include="control\GameControler.h" />
     <ClInclude Include="engine\SceneEngine.h" />
-    <ClInclude Include="gameobject\object.h" />
+    <ClInclude Include="gameobject\Sprite.h" />
     <ClInclude Include="gameobject\people\people.h" />
     <ClInclude Include="gameobject\people\selfpeople.h" />
     <ClInclude Include="globaldef.h" />
