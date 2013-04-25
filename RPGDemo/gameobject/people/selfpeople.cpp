@@ -5,7 +5,7 @@ SelfPeople::SelfPeople(int x, int y)
     : People(x, y)
     , m_Direction(Direction_Up)
 {
-    LoadPeopleImage("res\\img\\self.png", 8, 130, 130);
+    LoadPeopleImage("res\\img\\self.png", 8, 128, 128);
     m_nSpeed = 3;
 }
 
