@@ -2,6 +2,12 @@
 #include "Texture.h"
 
 Texture::Texture()
+    : m_Sprite_ptr(NULL)
+    , m_Texture(NULL)
+    , m_TextureHeight(0)
+    , m_TextureWidth(0)
+    , m_TextureX(0)
+    , m_TextureY(0)
 {
 }
 
