@@ -22,7 +22,6 @@ void SelfPeople::Render()
     }
     m_DirectionTex[m_Direction].RenderFrame(
         m_nPresentFrame,(float)m_nPosX, (float)m_nPosY);
-    m_nPresentFrame++;
 }
 
 void SelfPeople::Update()
@@ -54,6 +53,7 @@ void SelfPeople::Update()
             m_Direction = Direction_Up;
             m_nPosY -= m_nSpeed;
         }
+        m_nPresentFrame++;
     }
     else if (hge->Input_GetKeyState(HGEK_DOWN) )
     {
@@ -77,6 +77,7 @@ void SelfPeople::Update()
             m_Direction = Direction_Down;
             m_nPosY += m_nSpeed;
         }
+        m_nPresentFrame++;
     }
     else if (hge->Input_GetKeyState(HGEK_LEFT) )
     {
@@ -100,6 +101,7 @@ void SelfPeople::Update()
             m_Direction = Direction_Left;
             m_nPosX -= m_nSpeed;
         }
+        m_nPresentFrame++;
     }
     else if (hge->Input_GetKeyState(HGEK_RIGHT) )
     {
@@ -123,6 +125,7 @@ void SelfPeople::Update()
             m_Direction = Direction_Right;
             m_nPosX += m_nSpeed;
         }
+        m_nPresentFrame++;
     }
 }
 
