@@ -1,12 +1,18 @@
 #ifndef OBJECT_
 #define OBJECT_
 
+#define ElapsedTime 0.0166666f
+
 typedef enum _PeopleDirection
 {
     Direction_Left,
-    Direction_Right,
+    Direction_LeftUp,
     Direction_Up,
+    Direction_RightUp,
+    Direction_Right,
+    Direction_RightDown,
     Direction_Down,
+    Direction_LeftDown,
     Direction_Tail,
 }PeopleDirection;
 

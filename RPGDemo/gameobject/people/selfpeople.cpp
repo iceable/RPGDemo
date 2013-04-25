@@ -20,26 +20,102 @@ void SelfPeople::Render()
 
 void SelfPeople::Update()
 {
+    float fDis = ElapsedTime * m_nSpeed;
+    m_nPosX += int(cos(m_fAngle) * fDis);
+    m_nPosY += int(sin(m_fAngle) * fDis);
+
     //根据运动决定下一个点位置
     if (hge->Input_GetKeyState(HGEK_UP) )
     {
-        m_nPosY -= m_nSpeed;
-        m_Direction = Direction_Up;
+        if (hge->Input_GetKeyState(HGEK_LEFT))
+        {
+            m_fAngle = 5.0f * M_PI / 4.0f;
+            m_Direction = Direction_LeftUp;
+            m_nPosX -= m_nSpeed;
+            m_nPosY -= m_nSpeed;
+        }
+        else if (hge->Input_GetKeyState(HGEK_RIGHT))
+        {
+            m_fAngle = 2.0f * M_PI - M_PI / 4.0f;
+            m_Direction = Direction_RightUp;
+            m_nPosX += m_nSpeed;
+            m_nPosY -= m_nSpeed;
+        }
+        else
+        {
+            m_fAngle = 3.0f * M_PI / 2.0f;
+            m_Direction = Direction_Up;
+            m_nPosY -= m_nSpeed;
+        }
     }
     else if (hge->Input_GetKeyState(HGEK_DOWN) )
     {
-        m_nPosY += m_nSpeed;
-        m_Direction = Direction_Down;
+        if (hge->Input_GetKeyState(HGEK_LEFT))
+        {
+            m_fAngle = 3.0f * M_PI / 4.0f;
+            m_Direction = Direction_LeftDown;
+            m_nPosX -= m_nSpeed;
+            m_nPosY += m_nSpeed;
+        }
+        else if (hge->Input_GetKeyState(HGEK_RIGHT))
+        {
+            m_fAngle = M_PI / 4.0f;
+            m_Direction = Direction_RightDown;
+            m_nPosX += m_nSpeed;
+            m_nPosY += m_nSpeed;
+        }
+        else
+        {
+            m_fAngle = M_PI / 2.0f;
+            m_Direction = Direction_Down;
+            m_nPosY += m_nSpeed;
+        }
     }
     else if (hge->Input_GetKeyState(HGEK_LEFT) )
     {
-        m_nPosX -= m_nSpeed;
-        m_Direction = Direction_Left;
+        if (hge->Input_GetKeyState(HGEK_UP))
+        {
+            m_fAngle = 5.0f * M_PI / 4.0f;
+            m_Direction = Direction_LeftUp;
+            m_nPosX += m_nSpeed;
+            m_nPosY -= m_nSpeed;
+        }
+        else if (hge->Input_GetKeyState(HGEK_DOWN))
+        {
+            m_fAngle = 3.0f * M_PI / 4.0f;
+            m_Direction = Direction_LeftDown;
+            m_nPosX -= m_nSpeed;
+            m_nPosY += m_nSpeed;
+        }
+        else
+        {
+            m_fAngle = M_PI;
+            m_Direction = Direction_Left;
+            m_nPosX -= m_nSpeed;
+        }
     }
     else if (hge->Input_GetKeyState(HGEK_RIGHT) )
     {
-        m_nPosX += m_nSpeed;
-        m_Direction = Direction_Right;
+        if (hge->Input_GetKeyState(HGEK_UP))
+        {
+            m_fAngle = 2.0f * M_PI - M_PI / 4.0f;
+            m_Direction = Direction_RightUp;
+            m_nPosX += m_nSpeed;
+            m_nPosY -= m_nSpeed;
+        }
+        else if (hge->Input_GetKeyState(HGEK_DOWN))
+        {
+            m_fAngle = M_PI / 4.0f;
+            m_Direction = Direction_RightDown;
+            m_nPosX += m_nSpeed;
+            m_nPosY -= m_nSpeed;
+        }
+        else
+        {
+            m_fAngle = 0.0f;
+            m_Direction = Direction_Right;
+            m_nPosX += m_nSpeed;
+        }
     }
 }
 
