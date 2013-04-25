@@ -84,6 +84,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="control\controlobject\Texture.cpp" />
     <ClCompile Include="control\GameControler.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -97,6 +98,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="control\controlobject\Texture.h" />
     <ClInclude Include="control\GameControler.h" />
     <ClInclude Include="engine\SceneEngine.h" />
     <ClInclude Include="globaldef.h" />

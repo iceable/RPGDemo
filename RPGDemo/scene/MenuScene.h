@@ -2,6 +2,7 @@
 #define MENU_SCENE
 
 #include "..\hge\include\hgesprite.h"
+#include "../control/controlobject/Texture.h"
 #include "Scene.h"
 
 class MenuScene
@@ -14,8 +15,7 @@ public:
     void Output();
     void Reset();
 private:
-    hgeSprite* m_bgImg;
-    HTEXTURE m_bgImgTex;
+    Texture m_bgTexture;
     HEFFECT m_bgMusic;
 };
 

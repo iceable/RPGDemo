@@ -98,9 +98,7 @@ bool SceneEngine::Update()
     }
     if (!m_GameStack.empty())
     {
-        hge->Gfx_BeginScene();
         m_GameStack.back()->Update();
-        hge->Gfx_EndScene();
     }
     return false;
 }
