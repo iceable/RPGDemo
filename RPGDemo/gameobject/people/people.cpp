@@ -25,7 +25,7 @@ bool People::LoadPeopleImage(const std::string& strPath,
     m_nHeight = nHeight;
     for (int index = 0; index < Direction_Tail; index++)
     {
-        m_DirectionTex[index].Load(strPath, 0, (float)index * nHeight,
+        m_DirectionTex[index].LoadFrame(strPath, (float)index * nHeight,
             (float)nWidth, (float)nHeight);
     }
     return true;

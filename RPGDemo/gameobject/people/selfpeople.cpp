@@ -7,6 +7,7 @@ SelfPeople::SelfPeople(int x, int y)
 {
     LoadPeopleImage("res\\img\\self.png", 8, 128, 128);
     m_nSpeed = 3;
+    m_nPresentFrame = 0;
 }
 
 SelfPeople::~SelfPeople()
@@ -15,7 +16,13 @@ SelfPeople::~SelfPeople()
 
 void SelfPeople::Render()
 {
-    m_DirectionTex[m_Direction].Render((float)m_nPosX, (float)m_nPosY);
+    if (m_nPresentFrame == m_nFrameCount)
+    {
+        m_nPresentFrame = 1;
+    }
+    m_DirectionTex[m_Direction].RenderFrame(
+        m_nPresentFrame,(float)m_nPosX, (float)m_nPosY);
+    m_nPresentFrame++;
 }
 
 void SelfPeople::Update()

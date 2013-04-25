@@ -17,6 +17,7 @@ public:
 
 protected:
     PeopleDirection m_Direction;
+    int m_nPresentFrame;
 };
 
 #endif
