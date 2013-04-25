@@ -34,6 +34,15 @@
     <Filter Include="源文件\control\controlobject">
       <UniqueIdentifier>{a88b9b20-0b15-40c2-a1d2-68558ea07e56}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\control\gameobject">
+      <UniqueIdentifier>{cb88c435-9104-4f10-a0f0-ed8e734ec591}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\control\gameobject\Item">
+      <UniqueIdentifier>{7978a114-77ee-4f0b-a5b5-267089127bc6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\control\gameobject\people">
+      <UniqueIdentifier>{bdb073aa-5848-4cc2-90f8-dea76265f0bd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WinMain.cpp">
@@ -53,6 +62,12 @@
     </ClCompile>
     <ClCompile Include="control\controlobject\Texture.cpp">
       <Filter>源文件\control\controlobject</Filter>
+    </ClCompile>
+    <ClCompile Include="gameobject\people\people.cpp">
+      <Filter>源文件\control\gameobject\people</Filter>
+    </ClCompile>
+    <ClCompile Include="gameobject\people\selfpeople.cpp">
+      <Filter>源文件\control\gameobject\people</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -118,6 +133,15 @@
     </ClInclude>
     <ClInclude Include="control\controlobject\Texture.h">
       <Filter>源文件\control\controlobject</Filter>
+    </ClInclude>
+    <ClInclude Include="gameobject\object.h">
+      <Filter>源文件\control\gameobject</Filter>
+    </ClInclude>
+    <ClInclude Include="gameobject\people\people.h">
+      <Filter>源文件\control\gameobject\people</Filter>
+    </ClInclude>
+    <ClInclude Include="gameobject\people\selfpeople.h">
+      <Filter>源文件\control\gameobject\people</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
