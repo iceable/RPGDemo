@@ -30,13 +30,38 @@ void SelfPeople::Update()
     m_nPosX += int(cos(m_fAngle) * fDis);
     m_nPosY += int(sin(m_fAngle) * fDis);
 
-    if (InputEngine_->IsKey(HGEK_UP))
+    /*
+    switch (InputEngine_->Get())
     {
+    case Direction_Up:
         m_fAngle = 3.0f * M_PI / 2.0f;
         m_Direction = Direction_Up;
         m_nPosY -= m_nSpeed;
+        m_nPresentFrame++;
+        break;
+    case Direction_Down:
+        m_fAngle = M_PI / 2.0f;
+        m_Direction = Direction_Down;
+        m_nPosY += m_nSpeed;
+        m_nPresentFrame++;
+        break;
+    case Direction_LeftUp:
+        m_fAngle = 5.0f * M_PI / 4.0f;
+        m_Direction = Direction_LeftUp;
+        m_nPosX -= m_nSpeed;
+        m_nPosY -= m_nSpeed;
+        m_nPresentFrame++;
+        break;
+    case Direction_LeftDown:
+        m_fAngle = 3.0f * M_PI / 4.0f;
+        m_Direction = Direction_LeftDown;
+        m_nPosX -= m_nSpeed;
+        m_nPosY += m_nSpeed;
+        m_nPresentFrame++;
+        break;
     }
-    /*
+    */
+
     //根据运动决定下一个点位置
     if (hge->Input_GetKeyState(HGEK_UP))
     {
@@ -134,7 +159,7 @@ void SelfPeople::Update()
         }
         m_nPresentFrame++;
     }
-    */
+
 }
 
 bool SelfPeople::IsVaild()

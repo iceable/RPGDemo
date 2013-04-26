@@ -1,9 +1,16 @@
+#include "../globaldef.h"
 #include "InputEngine.h"
+
+#define INPUT_LEFT HGEK_LEFT
+#define INPUT_RIGHT HGEK_RIGHT
+#define INPUT_UP HGEK_UP
+#define INPUT_DOWN HGEK_DOWN
 
 template<> InputEngine* Singleton<InputEngine>::m_pInst = NULL;
 
 InputEngine::InputEngine()
 {
+    m_Key = Direction_Tail;
 }
 
 InputEngine::~InputEngine()
@@ -15,40 +22,59 @@ bool InputEngine::Initialize()
     return true;
 }
 
-bool InputEngine::IsKey(int nKey)
+PeopleDirection InputEngine::Get() const
 {
-    if (m_vecKey.empty())
-    {
-        return false;
-    }
-    if (m_vecKey.back() == nKey)
-    {
-        m_vecKey.pop_back();
-        return true;
-    }
-    return false;
-}
-
-bool InputEngine::IsKey(int nFirstKey, int nSecondKey)
-{
-    if (m_vecKey.size() < 2)
-    {
-        return false;
-    }
-    if (m_vecKey.back() == nFirstKey)
-    {
-        m_vecKey.pop_back();
-        if (m_vecKey.back() == nSecondKey)
-        {
-            m_vecKey.pop_back();
-            return true;
-        }
-        return false;
-    }
-    return false;
+    return m_Key;
 }
 
 void InputEngine::Update(int nKey)
 {
-    m_vecKey.push_back(nKey);
+    switch (nKey)
+    {
+    case INPUT_UP:
+        switch (m_Key)
+        {
+        case Direction_Tail:
+            m_Key = Direction_Up;
+            break;
+        case Direction_Left:
+            m_Key = Direction_LeftUp;
+            break;
+        case Direction_Right:
+            m_Key = Direction_RightUp;
+            break;
+        }
+        break;
+    case INPUT_DOWN:
+        switch (m_Key)
+        {
+        case Direction_Tail:
+            m_Key = Direction_Down;
+            break;
+        case Direction_Left:
+            m_Key = Direction_LeftDown;
+            break;
+        case Direction_Right:
+            m_Key = Direction_RightDown;
+            break;
+        case Direction_Down:
+            m_Key = Direction_Down;
+            break;
+        }
+        break;
+    case INPUT_LEFT:
+        switch (m_Key)
+        {
+        case Direction_Tail:
+            m_Key = Direction_Left;
+            break;
+        case Direction_Up:
+            m_Key = Direction_LeftUp;
+            break;
+        case Direction_Down:
+            m_Key = Direction_LeftDown;
+            break;
+        }
+        break;
+    }
 }

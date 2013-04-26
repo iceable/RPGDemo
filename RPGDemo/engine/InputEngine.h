@@ -2,6 +2,7 @@
 #define INPUTENGINE_
 
 #include "../unit/Singleton.h"
+#include "../gameobject/Sprite.h"
 #include <vector>
 
 class InputEngine : public Singleton<InputEngine>
@@ -13,14 +14,12 @@ public:
 
     virtual bool Initialize();
 
-    bool IsKey(int nKey);
-
-    bool IsKey(int nFirstKey, int nSecondKey);
+    PeopleDirection Get() const;
 
     void Update(int nKey);
 
 private:
-    std::vector<int> m_vecKey;
+     PeopleDirection m_Key;
 };
 
 #endif
