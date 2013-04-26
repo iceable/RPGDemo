@@ -1,8 +1,8 @@
 #ifndef PEOPLE_
 #define PEOPLE_
 
-#include "../Sprite.h"
-#include "../../control/controlobject/Texture.h"
+#include "gameobject\Sprite.h"
+#include "control/controlobject/Texture.h"
 #include <string>
 
 class People : public SpriteBase

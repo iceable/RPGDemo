@@ -1,8 +1,8 @@
 #ifndef TEXTURE_
 #define TEXTURE_
 
-#include "../../hge/include/hge.h"
-#include "../../hge/include/hgesprite.h"
+#include "hge/include/hge.h"
+#include "hge/include/hgesprite.h"
 #include <string>
 #include <vector>
 

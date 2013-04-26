@@ -33,4 +33,5 @@ void PlayScene::Update()
     {
         m_PlayerRole->MoveTo(nextPos);
     }
+    m_PlayerRole->Update();
 }

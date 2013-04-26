@@ -42,9 +42,6 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>.\Bin</OutDir>
-    <IncludePath>C:\Users\Administrator.PC-20130228HEQZ\Documents\GitHub\RPGDemo\RPGDemo\hge\include;$(IncludePath)</IncludePath>
-    <ReferencePath>C:\Users\Administrator.PC-20130228HEQZ\Documents\GitHub\RPGDemo\RPGDemo\hge\lib;$(ReferencePath)</ReferencePath>
-    <LibraryPath>C:\Users\Administrator.PC-20130228HEQZ\Documents\GitHub\RPGDemo\RPGDemo\hge\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -57,6 +54,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
