@@ -3,9 +3,9 @@
 
 #include "..\hge\include\hgesprite.h"
 #include "../control/controlobject/Texture.h"
-#include "../gameobject/people/selfpeople.h"
+#include "../gameobject/people/playerrole.h"
 #include "Scene.h"
-
+#include "../gameobject/map/gamemap.h"
 class PlayScene
     :public Scene
 {
@@ -17,8 +17,8 @@ public:
     void Output();
     void Reset();
 private:
-    Texture m_MapTexture;
-    SelfPeople* m_SelfPeople;
+    GameMap* m_Map;
+    PlayerRole* m_PlayerRole;
 };
 
 #endif

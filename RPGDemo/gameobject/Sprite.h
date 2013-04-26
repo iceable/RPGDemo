@@ -34,7 +34,7 @@ class SpriteBase : public ISprite
 {
 public:
     //精灵位置
-    SpriteBase(int x = 0, int y = 0)
+    SpriteBase(float x = 0, float y = 0)
         : m_nPosX(x)
         , m_nPosY(y)
         , m_bIsVisible(true)
@@ -50,14 +50,14 @@ public:
 public:
 
     //以下为设置和获取位置函数
-    int GetX(){ return m_nPosX; }
-    int GetY(){ return m_nPosY; }
-    void SetX(int x){ m_nPosX = x; }
-    void SetY(int y){ m_nPosY = y; }
+    float GetX(){ return m_nPosX; }
+    float GetY(){ return m_nPosY; }
+    void SetX(float x){ m_nPosX = x; }
+    void SetY(float y){ m_nPosY = y; }
 
 protected:
-    int     m_nPosX;
-    int     m_nPosY;
+    float     m_nPosX;
+    float     m_nPosY;
     int     m_nFrameStartX;     //图片开始贴图的X坐标
     int     m_nCurrentFrame;    //当前帧
     int     m_nSpeed;           //精灵速度

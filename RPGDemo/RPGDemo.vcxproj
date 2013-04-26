@@ -92,7 +92,7 @@
     <ClCompile Include="engine\SceneEngine.cpp" />
     <ClCompile Include="gameobject\map\gamemap.cpp" />
     <ClCompile Include="gameobject\people\people.cpp" />
-    <ClCompile Include="gameobject\people\selfpeople.cpp" />
+    <ClCompile Include="gameobject\people\playerrole.cpp" />
     <ClCompile Include="scene\MenuScene.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -109,7 +109,7 @@
     <ClInclude Include="gameobject\map\gamemap.h" />
     <ClInclude Include="gameobject\Sprite.h" />
     <ClInclude Include="gameobject\people\people.h" />
-    <ClInclude Include="gameobject\people\selfpeople.h" />
+    <ClInclude Include="gameobject\people\playerrole.h" />
     <ClInclude Include="globaldef.h" />
     <ClInclude Include="hge\include\hge.h" />
     <ClInclude Include="hge\include\hgeanim.h" />

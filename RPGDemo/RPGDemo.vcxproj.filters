@@ -69,14 +69,14 @@
     <ClCompile Include="gameobject\people\people.cpp">
       <Filter>源文件\control\gameobject\people</Filter>
     </ClCompile>
-    <ClCompile Include="gameobject\people\selfpeople.cpp">
-      <Filter>源文件\control\gameobject\people</Filter>
-    </ClCompile>
     <ClCompile Include="engine\InputEngine.cpp">
       <Filter>源文件\engine</Filter>
     </ClCompile>
     <ClCompile Include="gameobject\map\gamemap.cpp">
       <Filter>源文件\control\gameobject\map</Filter>
+    </ClCompile>
+    <ClCompile Include="gameobject\people\playerrole.cpp">
+      <Filter>源文件\control\gameobject\people</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -146,9 +146,6 @@
     <ClInclude Include="gameobject\people\people.h">
       <Filter>源文件\control\gameobject\people</Filter>
     </ClInclude>
-    <ClInclude Include="gameobject\people\selfpeople.h">
-      <Filter>源文件\control\gameobject\people</Filter>
-    </ClInclude>
     <ClInclude Include="gameobject\Sprite.h">
       <Filter>源文件\control\gameobject</Filter>
     </ClInclude>
@@ -157,6 +154,9 @@
     </ClInclude>
     <ClInclude Include="gameobject\map\gamemap.h">
       <Filter>源文件\control\gameobject\map</Filter>
+    </ClInclude>
+    <ClInclude Include="gameobject\people\playerrole.h">
+      <Filter>源文件\control\gameobject\people</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -8,7 +8,7 @@
 class People : public SpriteBase
 {
 public:
-    People(int x = 0, int y = 0);
+    People(float x = 0, float y = 0);
     virtual ~People();
 
     virtual bool LoadPeopleImage(const std::string& strPath,

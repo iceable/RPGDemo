@@ -18,7 +18,7 @@ bool GameMap::Load(string mapTex, string collisionMapTex)
 }
 GameMap::~GameMap()
 {
-    for (int i = 0; i < m_coveringTex.size(); i++)
+    for (int i = 0; i < (int)m_coveringTex.size(); i++)
     {
         delete m_coveringTex[i];
     }
@@ -33,7 +33,7 @@ void GameMap::Render()
 ///绘制遮盖角色的部分 应该在角色绘制之后调用
 void GameMap::RenderCovering()
 {
-    for (int i = 0; i < m_coveringTex.size(); i++)
+    for (int i = 0; i < (int)m_coveringTex.size(); i++)
     {
         m_coveringTex[i]->Render();
     }
@@ -50,6 +50,7 @@ bool GameMap::PushCovering(string path, float x, float y)
     }
     m_coveringTex.push_back(tex);
     return true;
+
 }
 
 ///移除遮掩物
