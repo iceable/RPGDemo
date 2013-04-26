@@ -1,6 +1,6 @@
 #include "people.h"
 
-People::People(int x, int y)
+People::People(float x, float y)
     : SpriteBase(x, y)
     , m_HP(0)
     , m_HPMax(0)

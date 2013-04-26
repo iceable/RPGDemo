@@ -46,8 +46,8 @@ bool Texture::Load(const std::string& strPath,
     }
     m_TextureX = x;
     m_TextureY = y;
-    m_TextureWidth = hge->Texture_GetWidth(m_Texture);
-    m_TextureHeight = hge->Texture_GetHeight(m_Texture);
+    m_TextureWidth = (float)hge->Texture_GetWidth(m_Texture);
+    m_TextureHeight = (float)hge->Texture_GetHeight(m_Texture);
 
     m_Sprite_ptr = new hgeSprite(m_Texture, m_TextureX, m_TextureY, m_TextureWidth, m_TextureHeight);
 

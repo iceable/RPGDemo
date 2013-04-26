@@ -3,12 +3,16 @@
 
 PlayScene::PlayScene()
 {
-    m_MapTexture.Load("res\\img\\map.png", 0, 0);
-    m_SelfPeople = new SelfPeople(200, 200);
+    m_Map = new GameMap;
+    m_Map->Load("res\\img\\map.png", "res\\img\\mapcollision.png");
+
+    m_PlayerRole = new PlayerRole(400, 300);
 }
 
 PlayScene::~PlayScene()
 {
+    delete m_Map;
+    delete m_PlayerRole;
 }
 
 void PlayScene::Reset()
@@ -18,11 +22,15 @@ void PlayScene::Reset()
 
 void PlayScene::Output()
 {
-    m_MapTexture.Render(0, 0);
-    m_SelfPeople->Render();
+    m_Map.Render();
+    m_PlayerRole->Render();
 }
 
 void PlayScene::Update()
 {
-    m_SelfPeople->Update();
+    roleVector nextPos = m_PlayerRole->GetNextPos();
+    if (!m_Map.isCollision(nextPos, ARGB(255,255,255,255))) ///不碰撞白色 可移动
+    {
+        m_PlayerRole->MoveTo(nextPos);
+    }
 }

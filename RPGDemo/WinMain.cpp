@@ -37,6 +37,8 @@ int WINAPI WinMain(          HINSTANCE hInstance,
     hge->System_SetState(HGE_SHOWSPLASH, false); //²»ÏÔÊ¾HGEµÄLOGO
     hge->System_SetState(HGE_WINDOWED, true); 
     hge->System_SetState(HGE_LOGFILE, "RPGDemo.log");
+    hge->System_SetState(HGE_SCREENWIDTH, WINDOW_WIDTH);
+    hge->System_SetState(HGE_SCREENHEIGHT, WINDOW_HEIGHT);
 
     SceneEngine_ = SceneEngine::Instance();
     InputEngine_ = InputEngine::Instance();

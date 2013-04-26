@@ -26,11 +26,11 @@ void MenuScene::Output()
 
 void MenuScene::Update()
 {
-    if (hge->Input_GetKeyState(HGEK_ESCAPE))
+    if (hge->Input_GetKeyState(KEY_ESCAPE))
     {
         SceneEngine_->Pop();
     }
-    if (hge->Input_GetKeyState(HGEK_ENTER))
+    if (hge->Input_GetKeyState(KEY_ENTER))
     {
         SceneEngine_->Pop();
         SceneEngine_->Push(new PlayScene);
