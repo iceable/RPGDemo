@@ -3,6 +3,7 @@
 #include "../../control/controlobject/Texture.h"
 #include "../../globaldef.h"
 #include <hgevector.h>
+
 #include <string>
 #include <vector>
 using namespace std;

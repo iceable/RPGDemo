@@ -49,6 +49,8 @@ bool GameMap::PushCovering(string path, float x, float y)
         return false;
     }
     m_coveringTex.push_back(tex);
+    return true;
+
 }
 
 ///ÒÆ³ıÕÚÑÚÎï
