@@ -13,10 +13,6 @@ InputEngine* InputEngine_ = NULL;
 
 bool Update()
 {
-    if (hge->Input_GetKey() != 0)
-    {
-        InputEngine_->Update(hge->Input_GetKey());
-    }
     return game->Update();
 }
 
@@ -43,7 +39,7 @@ int WINAPI WinMain(          HINSTANCE hInstance,
 
     SceneEngine_ = SceneEngine::Instance();
     InputEngine_ = InputEngine::Instance();
-    InputEngine_->Initialize();
+    InputEngine_->Initialize(hge);
     SceneEngine_->Initialize();
 
     if (hge->System_Initiate())

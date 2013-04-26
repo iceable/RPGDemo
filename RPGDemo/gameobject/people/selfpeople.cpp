@@ -8,6 +8,7 @@ SelfPeople::SelfPeople(int x, int y)
     LoadPeopleImage("res\\img\\self.png", 8, 128, 128);
     m_nSpeed = 3;
     m_nPresentFrame = 0;
+    m_nTimeFrame = 0;
 }
 
 SelfPeople::~SelfPeople()
@@ -20,8 +21,121 @@ void SelfPeople::Render()
     {
         m_nPresentFrame = 0;
     }
+    if (m_nTimeFrame == MOVEFRAMEMAX)
+    {
+        m_nPresentFrame++;
+        m_nTimeFrame = 0;
+    }
     m_DirectionTex[m_Direction].RenderFrame(
         m_nPresentFrame,(float)m_nPosX, (float)m_nPosY);
+}
+
+void SelfPeople::ControlMove()
+{
+    if (InputEngine_->IsKey(HGEK_UP) == Key_Down)
+    {
+        if (InputEngine_->IsKey(HGEK_RIGHT) == Key_Down)
+        {
+            m_fAngle = 2.0f * M_PI - M_PI / 4.0f;
+            m_Direction = Direction_RightUp;
+            m_nPosX += m_nSpeed;
+            m_nPosY -= m_nSpeed;
+            m_nTimeFrame++;
+        }
+        else if (InputEngine_->IsKey(HGEK_LEFT) == Key_Down)
+        {
+            m_fAngle = 5.0f * M_PI / 4.0f;
+            m_Direction = Direction_LeftUp;
+            m_nPosX -= m_nSpeed;
+            m_nPosY -= m_nSpeed;
+            m_nTimeFrame++;
+        }
+        else
+        {
+            m_fAngle = 3.0f * M_PI / 2.0f;
+            m_Direction = Direction_Up;
+            m_nPosY -= m_nSpeed;
+            m_nTimeFrame++;
+        }
+    }
+    else if (InputEngine_->IsKey(HGEK_DOWN) == Key_Down)
+    {
+        if (InputEngine_->IsKey(HGEK_RIGHT) == Key_Down)
+        {
+            m_fAngle = M_PI / 4.0f;
+            m_Direction = Direction_RightDown;
+            m_nPosX += m_nSpeed;
+            m_nPosY += m_nSpeed;
+            m_nTimeFrame++;
+        }
+        else if (InputEngine_->IsKey(HGEK_LEFT) == Key_Down)
+        {
+            m_fAngle = 3.0f * M_PI / 4.0f;
+            m_Direction = Direction_LeftDown;
+            m_nPosX -= m_nSpeed;
+            m_nPosY += m_nSpeed;
+            m_nTimeFrame++;
+        }
+        else
+        {
+            m_fAngle = M_PI / 2.0f;
+            m_Direction = Direction_Down;
+            m_nPosY += m_nSpeed;
+            m_nTimeFrame++;
+        }
+    }
+    else if (InputEngine_->IsKey(HGEK_LEFT) == Key_Down)
+    {
+        if (InputEngine_->IsKey(HGEK_UP) == Key_Down)
+        {
+            m_fAngle = 5.0f * M_PI / 4.0f;
+            m_Direction = Direction_LeftUp;
+            m_nPosX -= m_nSpeed;
+            m_nPosY -= m_nSpeed;
+            m_nTimeFrame++;
+        }
+        else if (InputEngine_->IsKey(HGEK_DOWN) == Key_Down)
+        {
+            m_fAngle = 3.0f * M_PI / 4.0f;
+            m_Direction = Direction_LeftDown;
+            m_nPosX -= m_nSpeed;
+            m_nPosY += m_nSpeed;
+            m_nTimeFrame++;
+        }
+        else
+        {
+            m_fAngle = M_PI;
+            m_Direction = Direction_Left;
+            m_nPosX -= m_nSpeed;
+            m_nTimeFrame++;
+        }
+    }
+    else if (InputEngine_->IsKey(HGEK_RIGHT) == Key_Down)
+    {
+        if (InputEngine_->IsKey(HGEK_UP) == Key_Down)
+        {
+            m_fAngle = 2.0f * M_PI - M_PI / 4.0f;
+            m_Direction = Direction_RightUp;
+            m_nPosX += m_nSpeed;
+            m_nPosY -= m_nSpeed;
+            m_nTimeFrame++;
+        }
+        else if (InputEngine_->IsKey(HGEK_DOWN) == Key_Down)
+        {
+            m_fAngle = M_PI / 4.0f;
+            m_Direction = Direction_RightDown;
+            m_nPosX += m_nSpeed;
+            m_nPosY += m_nSpeed;
+            m_nTimeFrame++;
+        }
+        else
+        {
+            m_fAngle = 0.0f;
+            m_Direction = Direction_Right;
+            m_nPosX += m_nSpeed;
+            m_nTimeFrame++;
+        }
+    }
 }
 
 void SelfPeople::Update()
@@ -30,38 +144,9 @@ void SelfPeople::Update()
     m_nPosX += int(cos(m_fAngle) * fDis);
     m_nPosY += int(sin(m_fAngle) * fDis);
 
+    //人物行走
+    ControlMove();
     /*
-    switch (InputEngine_->Get())
-    {
-    case Direction_Up:
-        m_fAngle = 3.0f * M_PI / 2.0f;
-        m_Direction = Direction_Up;
-        m_nPosY -= m_nSpeed;
-        m_nPresentFrame++;
-        break;
-    case Direction_Down:
-        m_fAngle = M_PI / 2.0f;
-        m_Direction = Direction_Down;
-        m_nPosY += m_nSpeed;
-        m_nPresentFrame++;
-        break;
-    case Direction_LeftUp:
-        m_fAngle = 5.0f * M_PI / 4.0f;
-        m_Direction = Direction_LeftUp;
-        m_nPosX -= m_nSpeed;
-        m_nPosY -= m_nSpeed;
-        m_nPresentFrame++;
-        break;
-    case Direction_LeftDown:
-        m_fAngle = 3.0f * M_PI / 4.0f;
-        m_Direction = Direction_LeftDown;
-        m_nPosX -= m_nSpeed;
-        m_nPosY += m_nSpeed;
-        m_nPresentFrame++;
-        break;
-    }
-    */
-
     //根据运动决定下一个点位置
     if (hge->Input_GetKeyState(HGEK_UP))
     {
@@ -159,7 +244,7 @@ void SelfPeople::Update()
         }
         m_nPresentFrame++;
     }
-
+    */
 }
 
 bool SelfPeople::IsVaild()

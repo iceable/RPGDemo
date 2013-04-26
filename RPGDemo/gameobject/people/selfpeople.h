@@ -3,6 +3,8 @@
 
 #include "people.h"
 
+#define MOVEFRAMEMAX 5
+
 class SelfPeople : public People
 {
 public:
@@ -15,9 +17,12 @@ public:
 
     virtual bool IsVaild();
 
+    virtual void ControlMove();
+
 protected:
     PeopleDirection m_Direction;
     int m_nPresentFrame;
+    int m_nTimeFrame;
 };
 
 #endif
