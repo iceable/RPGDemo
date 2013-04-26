@@ -33,112 +33,6 @@ void PlayerRole::Render()
 
 void PlayerRole::Update()
 {
-    float fDis = ElapsedTime * m_nSpeed;
-    m_nPosX += int(cos(m_fAngle) * fDis);
-    m_nPosY += int(sin(m_fAngle) * fDis);
-
-
-    //人物行走
-    //ControlMove();
-    /*
-    //根据运动决定下一个点位置
-    if (hge->Input_GetKeyState(HGEK_UP))
-    {
-        if (hge->Input_GetKeyState(HGEK_LEFT))
-        {
-            m_fAngle = 5.0f * M_PI / 4.0f;
-            m_Direction = Direction_LeftUp;
-            m_nPosX -= m_nSpeed;
-            m_nPosY -= m_nSpeed;
-        }
-        else if (hge->Input_GetKeyState(HGEK_RIGHT))
-        {
-            m_fAngle = 2.0f * M_PI - M_PI / 4.0f;
-            m_Direction = Direction_RightUp;
-            m_nPosX += m_nSpeed;
-            m_nPosY -= m_nSpeed;
-        }
-        else
-        {
-            m_fAngle = 3.0f * M_PI / 2.0f;
-            m_Direction = Direction_Up;
-            m_nPosY -= m_nSpeed;
-        }
-        m_nPresentFrame++;
-    }
-    else if (hge->Input_GetKeyState(HGEK_DOWN) )
-    {
-        if (hge->Input_GetKeyState(HGEK_LEFT))
-        {
-            m_fAngle = 3.0f * M_PI / 4.0f;
-            m_Direction = Direction_LeftDown;
-            m_nPosX -= m_nSpeed;
-            m_nPosY += m_nSpeed;
-        }
-        else if (hge->Input_GetKeyState(HGEK_RIGHT))
-        {
-            m_fAngle = M_PI / 4.0f;
-            m_Direction = Direction_RightDown;
-            m_nPosX += m_nSpeed;
-            m_nPosY += m_nSpeed;
-        }
-        else
-        {
-            m_fAngle = M_PI / 2.0f;
-            m_Direction = Direction_Down;
-            m_nPosY += m_nSpeed;
-        }
-        m_nPresentFrame++;
-    }
-    else if (hge->Input_GetKeyState(HGEK_LEFT) )
-    {
-        if (hge->Input_GetKeyState(HGEK_UP))
-        {
-            m_fAngle = 5.0f * M_PI / 4.0f;
-            m_Direction = Direction_LeftUp;
-            m_nPosX += m_nSpeed;
-            m_nPosY -= m_nSpeed;
-        }
-        else if (hge->Input_GetKeyState(HGEK_DOWN))
-        {
-            m_fAngle = 3.0f * M_PI / 4.0f;
-            m_Direction = Direction_LeftDown;
-            m_nPosX -= m_nSpeed;
-            m_nPosY += m_nSpeed;
-        }
-        else
-        {
-            m_fAngle = M_PI;
-            m_Direction = Direction_Left;
-            m_nPosX -= m_nSpeed;
-        }
-        m_nPresentFrame++;
-    }
-    else if (hge->Input_GetKeyState(HGEK_RIGHT) )
-    {
-        if (hge->Input_GetKeyState(HGEK_UP))
-        {
-            m_fAngle = 2.0f * M_PI - M_PI / 4.0f;
-            m_Direction = Direction_RightUp;
-            m_nPosX += m_nSpeed;
-            m_nPosY -= m_nSpeed;
-        }
-        else if (hge->Input_GetKeyState(HGEK_DOWN))
-        {
-            m_fAngle = M_PI / 4.0f;
-            m_Direction = Direction_RightDown;
-            m_nPosX += m_nSpeed;
-            m_nPosY -= m_nSpeed;
-        }
-        else
-        {
-            m_fAngle = 0.0f;
-            m_Direction = Direction_Right;
-            m_nPosX += m_nSpeed;
-        }
-        m_nPresentFrame++;
-    }
-    */
 }
 
 bool PlayerRole::IsVaild()
@@ -213,5 +107,5 @@ void PlayerRole::MoveTo(roleVector v)
 {
     m_nPosX = v.x;
     m_nPosY = v.y;
-    ++ m_nTimeFrame;
+    ++ m_nPresentFrame;
 }
