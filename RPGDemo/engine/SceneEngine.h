@@ -1,7 +1,7 @@
 #ifndef SCENE_ENGINE
 #define SCENE_ENGINE
-#include "../control/GameControler.h"
-#include "../Scene/Scene.h"
+#include "control/GameControler.h"
+#include "Scene/Scene.h"
 
 
 class SceneEngine : public Singleton<SceneEngine>

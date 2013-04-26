@@ -1,4 +1,4 @@
-#include "../../globaldef.h"
+#include "globaldef.h"
 #include "playerrole.h"
 
 PlayerRole::PlayerRole(float x, float y)

@@ -1,6 +1,6 @@
 #ifndef PlayerRole_
 #define PlayerRole_
-#include "../../hge/include/hgevector.h"
+#include "hge/include/hgevector.h"
 #include "people.h"
 
 #define MOVEFRAMEMAX 5

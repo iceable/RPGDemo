@@ -1,8 +1,8 @@
 #ifndef MENU_SCENE
 #define MENU_SCENE
 
-#include "..\hge\include\hgesprite.h"
-#include "../control/controlobject/Texture.h"
+#include "hge\include\hgesprite.h"
+#include "control/controlobject/Texture.h"
 #include "Scene.h"
 
 class MenuScene

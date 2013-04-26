@@ -1,8 +1,8 @@
 #ifndef GAME_CONTROLER
 #define GAME_CONTROLER
 
-#include "../unit/Singleton.h"
-#include "../globaldef.h"
+#include "unit/Singleton.h"
+#include "globaldef.h"
 
 
 class GameControler
