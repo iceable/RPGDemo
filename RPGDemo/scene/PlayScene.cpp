@@ -22,14 +22,14 @@ void PlayScene::Reset()
 
 void PlayScene::Output()
 {
-    m_Map.Render();
+    m_Map->Render();
     m_PlayerRole->Render();
 }
 
 void PlayScene::Update()
 {
     roleVector nextPos = m_PlayerRole->GetNextPos();
-    if (!m_Map.isCollision(nextPos, ARGB(255,255,255,255))) ///不碰撞白色 可移动
+    if (!m_Map->isCollision(nextPos, ARGB(255,255,255,255))) ///不碰撞白色 可移动
     {
         m_PlayerRole->MoveTo(nextPos);
     }
