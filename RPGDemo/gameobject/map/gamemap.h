@@ -2,7 +2,7 @@
 #define GAME_MAP
 #include "../../control/controlobject/Texture.h"
 #include "../../globaldef.h"
-#include <hgevector.h>
+#include "../../hge/include/hgevector.h"
 
 #include <string>
 #include <vector>

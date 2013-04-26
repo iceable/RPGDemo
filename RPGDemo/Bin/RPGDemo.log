@@ -1,22 +1,23 @@
 HGE Started..
 
 HGE version: 1.80
-Date: 26.04.2013, 20:47:09
+Date: 26.04.2013, 21:16:58
 
 Application: RPG Demo
-OS: Windows 6.2.9200
-Memory: 4194303K total, 3735812K free
+OS: Windows 6.1.7601
+Memory: 3646304K total, 1052980K free
 
-D3D Driver: nvumdshim.dll
-Description: Intel(R) HD Graphics 4000
-Version: 9.18.13.697
+D3D Driver: aticfx32.dll
+Description: AMD Radeon(TM) HD 6520G
+Version: 8.17.10.1116
 Mode: 800 x 600 x X8R8G8B8
 
-Sound Device: “Ùœ‰ (Sound Blaster X-Fi Surround 5.1 Pro)
+Sound Device: —Ô…˘∆˜ (Realtek High Definition Audio)
 Sample rate: 44100
 
 Init done.
 
+Can't load resource: res\img\mapcollision.png
 
 Finishing..
 The End.
