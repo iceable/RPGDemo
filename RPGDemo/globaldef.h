@@ -6,6 +6,8 @@
 #include <vector>
 
 #include "engine\SceneEngine.h"
+#include "engine\InputEngine.h"
 
 extern HGE* hge;
 extern SceneEngine* SceneEngine_;
+extern InputEngine* InputEngine_;

@@ -18,7 +18,7 @@ void SelfPeople::Render()
 {
     if (m_nPresentFrame == m_nFrameCount)
     {
-        m_nPresentFrame = 1;
+        m_nPresentFrame = 0;
     }
     m_DirectionTex[m_Direction].RenderFrame(
         m_nPresentFrame,(float)m_nPosX, (float)m_nPosY);
@@ -30,8 +30,15 @@ void SelfPeople::Update()
     m_nPosX += int(cos(m_fAngle) * fDis);
     m_nPosY += int(sin(m_fAngle) * fDis);
 
+    if (InputEngine_->IsKey(HGEK_UP))
+    {
+        m_fAngle = 3.0f * M_PI / 2.0f;
+        m_Direction = Direction_Up;
+        m_nPosY -= m_nSpeed;
+    }
+    /*
     //根据运动决定下一个点位置
-    if (hge->Input_GetKeyState(HGEK_UP) )
+    if (hge->Input_GetKeyState(HGEK_UP))
     {
         if (hge->Input_GetKeyState(HGEK_LEFT))
         {
@@ -127,6 +134,7 @@ void SelfPeople::Update()
         }
         m_nPresentFrame++;
     }
+    */
 }
 
 bool SelfPeople::IsVaild()

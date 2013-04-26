@@ -69,6 +69,9 @@
     <ClCompile Include="gameobject\people\selfpeople.cpp">
       <Filter>源文件\control\gameobject\people</Filter>
     </ClCompile>
+    <ClCompile Include="engine\InputEngine.cpp">
+      <Filter>源文件\engine</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="hge\include\hge.h">
@@ -142,6 +145,9 @@
     </ClInclude>
     <ClInclude Include="gameobject\Sprite.h">
       <Filter>源文件\control\gameobject</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\InputEngine.h">
+      <Filter>源文件\engine</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

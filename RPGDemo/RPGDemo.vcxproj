@@ -88,6 +88,7 @@
     <ClCompile Include="control\GameControler.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="engine\InputEngine.cpp" />
     <ClCompile Include="engine\SceneEngine.cpp" />
     <ClCompile Include="gameobject\people\people.cpp" />
     <ClCompile Include="gameobject\people\selfpeople.cpp" />
@@ -102,6 +103,7 @@
   <ItemGroup>
     <ClInclude Include="control\controlobject\Texture.h" />
     <ClInclude Include="control\GameControler.h" />
+    <ClInclude Include="engine\InputEngine.h" />
     <ClInclude Include="engine\SceneEngine.h" />
     <ClInclude Include="gameobject\Sprite.h" />
     <ClInclude Include="gameobject\people\people.h" />
