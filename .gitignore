@@ -19,6 +19,7 @@
 *.sdf
 *.idb
 *.pdb
+*.log
 
 Debug
 Release
