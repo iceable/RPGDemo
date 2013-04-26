@@ -36,7 +36,7 @@ Texture::~Texture()
 }
 
 bool Texture::Load(const std::string& strPath,
-        float x, float y, float width, float height)
+        float x, float y)
 {
     //暂时这样，完成POOL之后再进行替换
     m_Texture = hge->Texture_Load(strPath.c_str());
@@ -44,15 +44,18 @@ bool Texture::Load(const std::string& strPath,
     {
         return false;
     }
-    m_Sprite_ptr = new hgeSprite(m_Texture, x, y, width, height);
+    m_TextureX = x;
+    m_TextureY = y;
+    m_TextureWidth = hge->Texture_GetWidth(m_Texture);
+    m_TextureHeight = hge->Texture_GetHeight(m_Texture);
+
+    m_Sprite_ptr = new hgeSprite(m_Texture, m_TextureX, m_TextureY, m_TextureWidth, m_TextureHeight);
+
     if (!m_Sprite_ptr)
     {
         return false;
     }
-    m_TextureX = x;
-    m_TextureY = y;
-    m_TextureWidth = width;
-    m_TextureHeight = height;
+
     return true;
 }
 
@@ -110,4 +113,17 @@ void Texture::Release()
             delete (*it);
         }
     }
+}
+
+
+DWORD* Texture::CheckColor(float x, float y, float cx, float cy)
+{
+    if (x < 0 || y < 0 || x + cx > m_TextureWidth || y + cy > m_TextureHeight)
+    {
+        return NULL;
+    }
+    DWORD* pClr;
+    pClr = hge->Texture_Lock(m_Texture, true, x, y, cx, cy);
+    hge->Texture_Unlock(m_Texture);
+    return pClr;
 }

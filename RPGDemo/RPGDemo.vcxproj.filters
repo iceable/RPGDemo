@@ -43,6 +43,9 @@
     <Filter Include="源文件\control\gameobject\people">
       <UniqueIdentifier>{bdb073aa-5848-4cc2-90f8-dea76265f0bd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\control\gameobject\map">
+      <UniqueIdentifier>{2f8350fc-d8b4-46e3-b4ba-3eecce4d5b0a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WinMain.cpp">
@@ -71,6 +74,9 @@
     </ClCompile>
     <ClCompile Include="engine\InputEngine.cpp">
       <Filter>源文件\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="gameobject\map\gamemap.cpp">
+      <Filter>源文件\control\gameobject\map</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -148,6 +154,9 @@
     </ClInclude>
     <ClInclude Include="engine\InputEngine.h">
       <Filter>源文件\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="gameobject\map\gamemap.h">
+      <Filter>源文件\control\gameobject\map</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

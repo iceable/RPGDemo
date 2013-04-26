@@ -40,6 +40,7 @@ int WINAPI WinMain(          HINSTANCE hInstance,
     hge->System_SetState(HGE_TITLE, "RPG Demo");
     hge->System_SetState(HGE_SHOWSPLASH, false); //²»ÏÔÊ¾HGEµÄLOGO
     hge->System_SetState(HGE_WINDOWED, true); 
+    hge->System_SetState(HGE_LOGFILE, "RPGDemo.log");
 
     SceneEngine_ = SceneEngine::Instance();
     InputEngine_ = InputEngine::Instance();

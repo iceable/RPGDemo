@@ -3,7 +3,7 @@
 
 PlayScene::PlayScene()
 {
-    m_MapTexture.Load("res\\img\\map.png", 0, 0, 800, 600);
+    m_MapTexture.Load("res\\img\\map.png", 0, 0);
     m_SelfPeople = new SelfPeople(200, 200);
 }
 

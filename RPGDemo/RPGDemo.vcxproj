@@ -90,6 +90,7 @@
     </ClCompile>
     <ClCompile Include="engine\InputEngine.cpp" />
     <ClCompile Include="engine\SceneEngine.cpp" />
+    <ClCompile Include="gameobject\map\gamemap.cpp" />
     <ClCompile Include="gameobject\people\people.cpp" />
     <ClCompile Include="gameobject\people\selfpeople.cpp" />
     <ClCompile Include="scene\MenuScene.cpp">
@@ -105,6 +106,7 @@
     <ClInclude Include="control\GameControler.h" />
     <ClInclude Include="engine\InputEngine.h" />
     <ClInclude Include="engine\SceneEngine.h" />
+    <ClInclude Include="gameobject\map\gamemap.h" />
     <ClInclude Include="gameobject\Sprite.h" />
     <ClInclude Include="gameobject\people\people.h" />
     <ClInclude Include="gameobject\people\selfpeople.h" />

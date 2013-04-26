@@ -11,3 +11,8 @@
 extern HGE* hge;
 extern SceneEngine* SceneEngine_;
 extern InputEngine* InputEngine_;
+
+enum DIR_ENUM
+{
+    DIR_UP, DIR_DOWN, DIR_LEFT, DIR_RIGHT
+};

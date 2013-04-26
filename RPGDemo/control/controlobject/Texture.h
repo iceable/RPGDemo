@@ -13,7 +13,7 @@ public:
     virtual ~Texture();
 
     virtual bool Load(const std::string& strPath,
-        float x, float y, float width, float height);
+        float x, float y);
 
     virtual bool LoadFrame(const std::string& strPath,
         float y, float width, float height);
@@ -30,6 +30,7 @@ public:
 
     float GetHeight() const { return m_TextureHeight; }
 
+    DWORD* CheckColor(float x, float y, float cx, float cy);
     virtual void Release();
 
 private:
